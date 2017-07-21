@@ -1,0 +1,16 @@
+.center{
+  text-align: center;
+  vertical-align: middle;
+}
+@mixin border-radius($radius){
+  -webkit-border-radius:$radius;
+  -moz-border-radius:$radius;
+  border-radius: $radius;
+}
+@mixin round-shape($radius){
+  width:$radius;
+  height:$radius;
+  -webkit-border-radius:$radius;
+  -moz-border-radius:$radius;
+  border-radius: $radius;
+}

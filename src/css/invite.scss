@@ -1,0 +1,140 @@
+@import 'variable';
+@import 'common';
+
+html,body{
+  height:100%;
+  margin:0;
+  padding:0;
+}
+body{
+  background-color:$bg-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $main-font-family;
+}
+.box{
+  width:28.2em;
+  height:36.5em;
+  background-color: $box-bg-color;
+  padding: 2em 2.7em;
+}
+.title{
+  @extend .center;
+  font-size: $title-font-size;
+  height:2.5em;
+  line-height:2.5em ;
+  word-spacing:1px;
+  letter-spacing: 2px;
+}
+.subtitle{
+  @extend  .center;
+  height:1.5em;
+  line-height: 0.5em;
+  color:$subtitle-color;
+}
+.search-box{
+  width:100%;
+  height:4em;
+  position: relative;
+  color:$input-color;
+  .search{
+    width:92%;
+    height:2em;
+    border:0;
+    border-bottom:1px solid $input-color;
+    margin-top:0.9em;
+    outline: none;
+    transition: .5s ease;
+  }
+  .active{
+    width:100%;
+    border:1px solid $input-color;
+    text-indent: 1em;
+    margin-top:1.8em;
+  }
+  i{
+    position: absolute;
+    font-size:1.3em;
+    right:0;
+    top:24px;
+  }
+}
+.contact-box{
+  display: flex;
+  height:6em;
+  margin-top: 0.2em;
+  img{
+    width:4.7em;
+    height:4.7em;
+    @include border-radius(4.7em);
+  }
+}
+.info{
+  margin-top:0.95em;
+  margin-left:1.4em;
+  flex-basis: 75%;
+  .name {
+    color: $name-color;
+    font-size:1em;
+  }
+  .skill{
+    color:$skill-color;
+    font-size:0.7em;
+    letter-spacing: 1px;
+  }
+  .contact{
+    font-size:0.9em;
+    span{
+      color:$subtitle-color;
+      margin-right:0.8em;
+    }
+  }
+}
+.check-box{
+  height:100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .checks{
+    visibility: hidden;
+  }
+  .checks+label{
+    border:1px solid $email-color;
+    @include round-shape(18px);
+    margin-top:0.7em;
+  }
+  .checks:checked+label{
+    background: url(../images/basketball.png) no-repeat;
+    background-size: 19px 19px;
+    border:none;
+    @include round-shape(19px);
+  }
+}
+.email{
+  width:99%;
+  height:3.6em;
+  @include border-radius(4px);
+  border:1px solid $email-color;
+  text-indent: 1.2em;
+  margin-top:0.5em;
+  letter-spacing: 1px;
+  outline: none;
+}
+.email::placeholder{
+  color:$email-color;
+}
+.submit{
+  width:100%;
+  height:3.3em;
+  margin-top:1.8em;
+  @include border-radius(5px);
+  border:none;
+  color:$box-bg-color;
+  background-color:$main-color;
+  font-size:1em;
+  text-transform: uppercase;
+  outline: none;
+}
+
+
