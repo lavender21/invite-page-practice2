@@ -136,5 +136,9 @@ body{
   text-transform: uppercase;
   outline: none;
 }
+input.disable{
+  cursor:not-allowed;
+  background-color: #ccc;
+}
 
 
